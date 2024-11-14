@@ -1,0 +1,200 @@
+body {
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline;
+  margin-right: 15px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  padding: 20px;
+}
+
+h2 {
+  color: #333;
+}
+
+p {
+  line-height: 1.6;
+}
+
+aside {
+  background-color: #e0e0e0;
+  padding: 15px;
+  margin: 20px 0;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+/* flex style */
+.gallery h2 {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.flex-item {
+  background-color: #e0e0e0;
+  width: 30%;
+  margin-bottom: 20px;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* grid style */
+.products h2 {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 20px;
+}
+
+.grid-item {
+  background-color: #c0c0c0;
+  padding: 20px;
+  text-align: center;
+}
+
+/* button */
+.standart-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.button {
+  background-color: #008cba;
+  color: white;
+  padding: 30px;
+  margin: 20px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.button:hover {
+  background-color: #005f73;
+  transform: scale(1.05);
+}
+
+/* box animation */
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: #e63496;
+  margin: 50px;
+  animation: moveUpDown 2s ease-in-out infinite alternate;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #ffa500;
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeInEffect 2s forwards;
+}
+
+@keyframes fadeInEffect {
+  to {
+    opacity: 1;
+  }
+}
+
+/* loader animation */
+.loader {
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid #3498db;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+  margin: 50px auto;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes moveUpDown {
+  from {
+    transform: translateX(-150px);
+  }
+  to {
+    transform: translateX(150px);
+  }
+}
+/* Для экранов шириной до 800px */
+@media (max-width: 800px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr); /*2 columns*/
+  }
+}
+
+/* Медиа-запрос для экранов шириной менее 500px */
+@media (max-width: 500px) {
+  .flex-container {
+    flex-direction: column;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr; /*1 column*/
+  }
+}

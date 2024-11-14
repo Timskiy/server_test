@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Мой сайт</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Форма регистрации -->
+  <h2>Регистрация</h2>
+  <form id="registerForm">
+    <input type="text" id="registerName" placeholder="Имя" required>
+    <input type="email" id="registerEmail" placeholder="Email" required>
+    <input type="password" id="registerPassword" placeholder="Пароль" required>
+    <button type="submit">Зарегистрироваться</button>
+  </form>
+
+  <!-- Форма входа -->
+  <h2>Вход</h2>
+  <form id="loginForm">
+    <input type="email" id="loginEmail" placeholder="Email" required>
+    <input type="password" id="loginPassword" placeholder="Пароль" required>
+    <button type="submit">Войти</button>
+  </form>
+
+  <!-- Кнопки для управления сессией -->
+  <button id="logoutButton" style="display: none;">Выйти</button>
+  <button id="getProtectedDataButton" style="display: none;">Получить защищённые данные</button>
+
+  <!-- Контейнер для отображения сообщений -->
+  <div id="messageContainer"></div>
+
+  <!-- Контейнер для отображения защищённых данных -->
+  <div id="protectedDataContainer"></div>
+
+  <!-- Подключение JavaScript -->
+  <script src="js/scriptserver.js"></script>
+</body>
+</html>

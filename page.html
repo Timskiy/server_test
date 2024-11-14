@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Мой сайт</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Форма для добавления нового пользователя -->
+  <form id="addUserForm">
+    <input type="text" id="nameInput" placeholder="Имя" required>
+    <input type="email" id="emailInput" placeholder="Email" required>
+    <button type="submit">Добавить пользователя</button>
+  </form>
+
+  <!-- Кнопка для загрузки пользователей -->
+  <button id="loadUsersButton">Загрузить пользователей</button>
+
+  <!-- Контейнер для отображения пользователей -->
+  <div id="usersContainer"></div>
+
+  <!-- Подключение JavaScript -->
+  <script src="js/scriptserver.js"></script>
+</body>
+</html>
