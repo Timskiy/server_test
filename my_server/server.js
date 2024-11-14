@@ -9,7 +9,7 @@ const jwt = require('jsonwebtoken');
 const User = require('../models/User');
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 const SECRET_KEY = process.env.SECRET_KEY; //Секретный код для JWT
 // const SECRET_KEY = 'your_secret_key'; //Секретный код для JWT
