@@ -121,5 +121,5 @@ app.post('/users', authenticateToken, async (req, res) => {
 
 // Запуск сервера
 app.listen(port, () => {
-  console.log(`Server running on port ${PORT}`);
+  console.log(`Server running on port ${port}`);
 });
