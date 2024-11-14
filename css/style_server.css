@@ -1,0 +1,116 @@
+/* Общие стили */
+body {
+    background-color: #f4f7fc;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  h2 {
+    color: #333;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  input, button {
+    padding: 12px;
+    margin: 10px 0;
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+  }
+  
+  /* Форма регистрации и входа */
+  form {
+    background-color: #fff;
+    padding: 30px;
+    max-width: 400px;
+    margin: 30px auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    background-color: #fafafa;
+  }
+  
+  button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #45a049;
+  }
+  
+  /* Кнопки для управления сессией */
+  button#logoutButton,
+  button#getProtectedDataButton {
+    background-color: #f44336;
+    display: block;
+    width: auto;
+    margin: 20px auto;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button#logoutButton:hover,
+  button#getProtectedDataButton:hover {
+    background-color: #e53935;
+  }
+  
+  /* Контейнер сообщений */
+  #messageContainer {
+    margin: 20px;
+    padding: 15px;
+    background-color: #e7f3e7;
+    border: 1px solid #4CAF50;
+    border-radius: 8px;
+    color: #4CAF50;
+  }
+  
+  #protectedDataContainer {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Мобильная адаптация */
+  @media (max-width: 800px) {
+    form {
+      padding: 20px;
+      width: 90%;
+    }
+  
+    button[type="submit"], 
+    input[type="text"], 
+    input[type="email"], 
+    input[type="password"] {
+      font-size: 14px;
+    }
+  }
+  
+  /* Анимация появления */
+  .fade-in {
+    opacity: 0;
+    animation: fadeInEffect 2s forwards;
+  }
+  
+  @keyframes fadeInEffect {
+    to {
+      opacity: 1;
+    }
+  }
+  
