@@ -4,7 +4,7 @@ const express = require('express');
 const cors = require('cors'); // Импортируем пакет cors
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose'); // Импортируем mongoose
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const User = require('../models/User');
 
