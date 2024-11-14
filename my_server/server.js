@@ -1,4 +1,3 @@
-console.log('Server is running');
 require('dotenv').config();
 
 const express = require('express');
@@ -13,11 +12,12 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 const SECRET_KEY = process.env.SECRET_KEY; //Секретный код для JWT
-// const SECRET_KEY = 'your_secret_key'; //Секретный код для JWT
-console.log("Значение SECRET_KEY:", SECRET_KEY);
+
 //Connect to MongoDB
+const mongoURI = process.env.MONGODB_URI;
+
 mongoose
-  .connect('mongodb://localhost:27017/mydatabase', {
+  .connect(mongoURI, {
     useNewUrlParser: true,
     useUnifiedTopology: true
   })
@@ -121,5 +121,5 @@ app.post('/users', authenticateToken, async (req, res) => {
 
 // Запуск сервера
 app.listen(port, () => {
-  console.log(`Сервер запущен по адресу http://localhost:${port}`);
+  console.log(`Server running on port ${PORT}`);
 });

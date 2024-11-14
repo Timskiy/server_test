@@ -1,3 +1,5 @@
+const apiUrl = 'https://server-test-h6vt.onrender.com';
+
 // Получаем элементы из DOM
 const registerForm = document.getElementById('registerForm');
 const registerName = document.getElementById('registerName');
@@ -40,7 +42,7 @@ registerForm.addEventListener('submit', event => {
     password: registerPassword.value
   };
 
-  fetch('http://localhost:3000/register', {
+  fetch(`${apiUrl}/register`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
@@ -72,7 +74,7 @@ loginForm.addEventListener('submit', event => {
     password: loginPassword.value
   };
 
-  fetch('http://localhost:3000/login', {
+  fetch(`${apiUrl}/login`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
@@ -129,7 +131,7 @@ logoutButton.addEventListener('click', () => {
 
 // Обработчик получения защищённых данных
 getProtectedDataButton.addEventListener('click', () => {
-  fetch('http://localhost:3000/users', {
+  fetch(`${apiUrl}/users`, {
     method: 'GET',
     headers: {
       Authorization: 'Bearer ' + authToken
