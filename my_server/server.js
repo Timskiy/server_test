@@ -1,3 +1,4 @@
+console.log('Server is running');
 require('dotenv').config();
 
 const express = require('express');
@@ -14,7 +15,6 @@ const port = process.env.PORT || 3000;
 const SECRET_KEY = process.env.SECRET_KEY; //Секретный код для JWT
 // const SECRET_KEY = 'your_secret_key'; //Секретный код для JWT
 console.log("Значение SECRET_KEY:", SECRET_KEY);
-
 //Connect to MongoDB
 mongoose
   .connect('mongodb://localhost:27017/mydatabase', {
